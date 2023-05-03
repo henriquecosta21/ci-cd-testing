@@ -16,3 +16,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         server-dir: ./public_html/
+        
