@@ -2,16 +2,14 @@
 name: "\U0001F680 Deploy website on push"
 jobs:
   web-deploy:
-    name: "\U0001F389 Deploy"
+    name: "Deploy"
     runs-on: ubuntu-latest
     steps:
-      - name: "\U0001F69A Get latest code"
+      - name: "Get latest code"
         uses: actions/checkout@v3
-      - name: "\U0001F4C2 Sync files"
+      - name: "Sync files"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.SERVER }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          server-dir: ./public_html/
+          server: files.000webhost.com
+          username: octopuslabs
+          password: ar)h8LaEqy1p8MW$HN@6
