@@ -10,10 +10,11 @@ jobs:
       - name: "Sync files"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: files.000webhost.com
-          username: octopuslabs
-          password: ar)h8LaEqy1p8MW$HN@6
-          server-dir: ./public_html/
+          server: ${{ secrets.SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          server-dir: ${{ secrets.PATH }}
           exclude: |
             **/.git*
             **/.git*/**
