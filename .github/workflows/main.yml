@@ -1,5 +1,5 @@
 'on': push
-name: "\U0001F680 Deploy website on push"
+name: "Deploy website on push"
 jobs:
   web-deploy:
     name: "Deploy"
@@ -13,8 +13,7 @@ jobs:
           server: ${{ secrets.SERVER }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          server-dir: ${{ secrets.PATH }}
+          server-dir: ./public_html/
           exclude: |
             **/.git*
             **/.git*/**
