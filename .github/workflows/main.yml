@@ -1,19 +1,17 @@
-on: push
-name: 🚀 Deploy website on push
+'on': push
+name: "\U0001F680 Deploy website on push"
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: "\U0001F389 Deploy"
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.SERVER }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        server-dir: ./public_html/
-        
+      - name: "\U0001F69A Get latest code"
+        uses: actions/checkout@v3
+      - name: "\U0001F4C2 Sync files"
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          server-dir: ./public_html/
